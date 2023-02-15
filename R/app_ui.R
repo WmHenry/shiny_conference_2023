@@ -22,7 +22,7 @@ app_ui <- function(request) {
         title = "Demo App"
       ),
       bs4Dash::dashboardSidebar(
-        width = 300,
+        width = 500,
         bs4Dash::sidebarMenu(
           id = "sidebar",
           about_item,

@@ -56,7 +56,7 @@ get_custom_theme <- function(type = "bs4Dash-light-dark", font_family = "Source 
                           .dark-mode .card.card-outline-tabs .card-header a:hover {border-color: #00848a;background: #312d2d;color: #ffffff;}
                           ol, ul, dl {padding-inline-start: 40px;}
                           a {color: #1371d8;}
-                          .brand-link {background-color: #00848a !important;}
+                          .brand-link {background-color: #00848a !important; padding-left: 15px;}
                           ")
 
     class(output_theme) <- c("css", "html", "character")
