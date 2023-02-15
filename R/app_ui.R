@@ -7,8 +7,15 @@
 app_ui <- function(request) {
   autodisable_controlbar(
     bs4Dash::dashboardPage(
-      title = "shinyRochePortfolio",
+      title = "Shiny Conference 2023",
       skin = "light",
+      freshTheme = get_custom_theme(
+        type = "bs4Dash-light-dark",
+        # font_family = "RocheSans",
+        fresh::bs4dash_layout(
+          control_sidebar_width = "300px"
+        )
+      ),
       dark = NULL,
       bs4Dash::dashboardHeader(
         fixed = TRUE,
