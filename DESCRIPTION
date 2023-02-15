@@ -1,0 +1,42 @@
+Package: scdemo2023
+Title: RWD IE Team Demo for ShinyConf 2023
+Version: 1.0
+Authors@R: 
+    c(person(given = "Krystian", family = "Igras", 
+             email = "krystian8207@gmail.com", 
+             role = c("aut", "cre")
+    ))
+Description: RWD IE Team Demo for ShinyConf 2023
+License: MIT
+Imports: 
+    config (>= 0.3.1),
+    golem (>= 0.3.2),
+    shiny (>= 1.7.1),
+    pkgload,
+    bs4Dash,
+    cohortBuilder,
+    shinyCohortBuilder,
+    magrittr,
+    base64enc,
+    fresh,
+    glue,
+    markdown,
+    shinycssloaders,
+    shinyGizmo,
+    shinyWidgets
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.2.3
+Collate:
+    'scdemo2023-package.R'
+    'data.R'
+    'app_config.R'
+    'mod_navigation.R'
+    'define_filters.R'
+    'mod_about.R'
+    'mod_timelines.R'
+    'app_ui.R'
+    'app_server.R'
+    'utils-pipe.R'
+Depends: 
+    R (>= 2.10)
