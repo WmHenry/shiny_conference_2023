@@ -39,7 +39,7 @@ get_custom_theme <- function(type = "bs4Dash-light-dark", font_family = "Source 
       ),
       fresh::bs4dash_yiq(contrasted_threshold = 10, text_dark = "#FFF", text_light = "#272c30"),
       fresh::bs4dash_layout(
-        main_bg = "#FFF7F5"),
+        main_bg = "#EAEAEA"),
       ...
     )
 

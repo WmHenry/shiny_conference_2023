@@ -17,31 +17,33 @@ body {
   z-index: 999;
   padding-bottom: 3px;
   padding-top: 1px;
-  background-color: #343A40;
+  padding-right: 5px;
+  padding-left: 5px;
+  background-color: #047378;
 }
 
-/*
+
 #controlbar {
-  background-color: #343A40;
+  background-color: #047378;
   display: block !important;
 }
+
 
 #controlbar .cb_steps {
   padding: 0 5px 0 5px;
 }
 
+
 #controlbar .cb_panel > .scb_button {
-    background-color: #007bff;
+    background-color: #858383;
     color: #fff;
-    margin: 5px;
     border: 0;
-    width: 289px;
 }
 
 #controlbar .cb_panel > .scb_button:hover {
-    background-color: #0062cc;
+    background-color: #3C4048;
 }
-*/
+
 /*
 .main-sidebar {
   box-shadow: none !important;
