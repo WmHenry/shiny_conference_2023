@@ -43,18 +43,20 @@ get_custom_theme <- function(type = "bs4Dash-light-dark", font_family = "Source 
       ...
     )
 
-    output_theme <- paste(output_theme, ".skin-blue .main-header .navbar {background-color: #00ABB3;}
-                          .navbar-white {background-color: #00ABB3;}
-                          .navbar-gray-dark {background-color: #00ABB3;}
+    output_theme <- paste(output_theme, ".skin-blue .main-header .navbar {background-color: #047378;}
+                          .navbar-white {background-color: #047378;}
+                          .navbar-gray-dark {background-color: #047378;}
                           .jumbotron {background: #ffffff8f;box-shadow: 0 0px 9px rgb(0 0 0 / 11%), 0 8px 12px rgb(0 0 0 / 8%) !important; border: 1px solid rgb(0 0 0 / 14%);}
                           .dark-mode .jumbotron {background-color: #373e44;box-shadow: 0 0px 9px rgb(0 0 0 / 18%), 0 8px 12px rgb(0 0 0 / 16%) !important;}
                           .navbar-nav .dark-theme-icon {color: #fff;}
                           .btn-light{color: #000000;} .btn-light:hover{color: #000000;}
                           .dropdown-item.active, .dropdown-item:active {background-color: #64aeff;}
-                          .card.card-outline-tabs .card-header a:hover {border-top: 3px solid #00ABB3;}
+                          .card.card-outline-tabs .card-header a:hover {border-top: 3px solid #047378;}
                           .dark-mode .card.card-outline-tabs .card-header a:hover {border-color: #00848a;background: #312d2d;color: #ffffff;}
                           ol, ul, dl {padding-inline-start: 40px;}
-                          a {color: #1371d8;}")
+                          a {color: #1371d8;}
+                          .brand-link {background-color: #00848a !important;}
+                          ")
 
     class(output_theme) <- c("css", "html", "character")
   }

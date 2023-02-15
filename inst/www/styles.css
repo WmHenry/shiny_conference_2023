@@ -11,31 +11,6 @@ body {
   display: none;
 }
 
-/*
-.cb_run_step {
-  visibility: hidden !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  max-height: 0 !important;
-  max-width: 0 !important;
-}
-
-.cb_step > .panel-heading {
-  max-height: 0 !important;
-  padding: 0 !important;
-}
-
-.cb_step > .panel-heading .scb_button {
-  visibility: hidden !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  max-height: 0 !important;
-  max-width: 0 !important;
-}
-*/
-
 .cb_panel {
   position: sticky;
   top: 0;
@@ -45,6 +20,7 @@ body {
   background-color: #343A40;
 }
 
+/*
 #controlbar {
   background-color: #343A40;
   display: block !important;
@@ -65,13 +41,14 @@ body {
 #controlbar .cb_panel > .scb_button:hover {
     background-color: #0062cc;
 }
-
+*/
+/*
 .main-sidebar {
   box-shadow: none !important;
 }
 
-.main-header, .brand-link {
-  background-color: #0b41cd !important;
+.brand-link {
+  background-color: #00ABB3 !important;
 }
 
 .nav-link {
@@ -128,3 +105,4 @@ body {
 .panel-body {
   padding: 0 20px 0 20px;
 }
+*/

@@ -11,7 +11,6 @@ app_ui <- function(request) {
       skin = "light",
       freshTheme = get_custom_theme(
         type = "bs4Dash-light-dark",
-        # font_family = "RocheSans",
         fresh::bs4dash_layout(
           control_sidebar_width = "300px"
         )
@@ -20,7 +19,7 @@ app_ui <- function(request) {
       bs4Dash::dashboardHeader(
         fixed = TRUE,
         titleWidth = 200,
-        title = "App"
+        title = "Demo App"
       ),
       bs4Dash::dashboardSidebar(
         width = 300,
@@ -56,8 +55,8 @@ app_ui <- function(request) {
         version = utils::packageVersion("scdemo2023"),
         package = "scdemo2023",
         src = "www",
-        script = "script.js"#,
-        #stylesheet = "styles.css"
+        script = "script.js",
+        stylesheet = "styles.css"
       )
     )
 }
