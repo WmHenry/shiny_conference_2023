@@ -18,6 +18,7 @@ get_custom_theme <- function(type = "bs4Dash-light-dark", font_family = "Source 
  if(type == "bs4Dash-light-dark"){
     output_theme <- fresh::create_theme(
       fresh::bs4dash_vars(
+        body_color = "#3C4048",
         navbar_light_color = "#FFF",
         navbar_light_active_color = "#bec5cb",
         navbar_light_hover_color = "#bec5cb",
