@@ -56,8 +56,8 @@ app_ui <- function(request) {
         version = utils::packageVersion("scdemo2023"),
         package = "scdemo2023",
         src = "www",
-        script = "script.js",
-        stylesheet = "styles.css"
+        script = "script.js"#,
+        #stylesheet = "styles.css"
       )
     )
 }

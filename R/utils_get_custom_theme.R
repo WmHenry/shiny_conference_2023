@@ -10,43 +10,12 @@
 #'
 #' @examples
 #' RocheIdentity::get_roche_theme()
-#' RocheIdentity::get_roche_theme(type = "shinydashboard-blue", font_family = "Source Sans Pro")
-get_custom_theme <- function(type = "shinydashboard-teal", font_family = "Source Sans Pro", ...) {
+#' RocheIdentity::get_roche_theme(type = "bs4Dash-light-dark", font_family = "Source Sans Pro")
+get_custom_theme <- function(type = "bs4Dash-light-dark", font_family = "Source Sans Pro", ...) {
 
   output_theme <- ""
 
-  if(type == "shinydashboard-teal"){
-    output_theme <- fresh::create_theme(
-      theme = "default",
-      fresh::adminlte_color(
-        light_blue = "#00ABB3"
-      ),
-      fresh::adminlte_sidebar(
-        dark_bg = "#022366",
-        dark_hover_bg = "#214ca5",
-        dark_color = "#ffffff"
-      ),
-      fresh::adminlte_global(
-        content_bg = "#fff7f5",
-        box_bg = "#ffffff"
-      ),
-      ...
-    )
-  } else if(type == "shinydashboard-teal-light"){
-    output_theme <- fresh::create_theme(
-      theme = "default",
-      fresh::adminlte_color(
-        light_blue = "#00ABB3"
-      ),
-      fresh::adminlte_sidebar(
-        dark_bg = "#ffffff",
-        dark_hover_bg = "#f4f4f5",
-        dark_color = "#000000",
-        dark_hover_color = "#000000"
-      ),
-      ...
-    )
-  } else if(type == "bs4Dash-light-dark"){
+ if(type == "bs4Dash-light-dark"){
     output_theme <- fresh::create_theme(
       fresh::bs4dash_vars(
         navbar_light_color = "#FFF",
@@ -56,7 +25,7 @@ get_custom_theme <- function(type = "shinydashboard-teal", font_family = "Source
         navbar_dark_active_color = "#bec5cb",
         navbar_dark_hover_color = "#bec5cb"
       ),
-      fresh::bs4dash_status(primary = "#214ca5",
+      fresh::bs4dash_status(primary = "#00848a",
                             info="#64aeff"),
       fresh::bs4dash_sidebar_light(
         bg = "#ffffff",
@@ -64,7 +33,7 @@ get_custom_theme <- function(type = "shinydashboard-teal", font_family = "Source
         hover_color = "#000000"
       ),
       fresh::bs4dash_sidebar_dark(
-        bg = "#022366",
+        bg = "#035357",
         color = "#FFF",
         hover_color = "#FFF"
       ),
@@ -83,7 +52,7 @@ get_custom_theme <- function(type = "shinydashboard-teal", font_family = "Source
                           .btn-light{color: #000000;} .btn-light:hover{color: #000000;}
                           .dropdown-item.active, .dropdown-item:active {background-color: #64aeff;}
                           .card.card-outline-tabs .card-header a:hover {border-top: 3px solid #00ABB3;}
-                          .dark-mode .card.card-outline-tabs .card-header a:hover {border-color: #214ca5;background: #312d2d;color: #ffffff;}
+                          .dark-mode .card.card-outline-tabs .card-header a:hover {border-color: #00848a;background: #312d2d;color: #ffffff;}
                           ol, ul, dl {padding-inline-start: 40px;}
                           a {color: #1371d8;}")
 
