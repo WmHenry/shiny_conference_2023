@@ -19,6 +19,7 @@ get_custom_theme <- function(type = "bs4Dash-light-dark", font_family = "Source 
     output_theme <- fresh::create_theme(
       fresh::bs4dash_vars(
         body_color = "#3C4048",
+        body_overflow_y = "hidden",
         navbar_light_color = "#FFF",
         navbar_light_active_color = "#bec5cb",
         navbar_light_hover_color = "#bec5cb",
@@ -57,7 +58,11 @@ get_custom_theme <- function(type = "bs4Dash-light-dark", font_family = "Source 
                           ol, ul, dl {padding-inline-start: 40px;}
                           a {color: #1371d8;}
                           .brand-link {background-color: #00848a !important; padding-left: 15px;}
-                          ")
+                          .cb_panel { position: sticky; top: 0; z-index: 999; padding-bottom: 3px; padding-top: 1px;  padding-right: 5px;  padding-left: 5px;  background-color: #047378;}
+                          #controlbar {  background-color: #047378;  display: block !important;}
+                          #controlbar .cb_steps {  padding: 0 5px 0 5px;  color: #3C4048;}
+                          #controlbar .cb_panel > .scb_button { background-color: #035357; color: #fff; border: 0; margin-top: 3px;}
+                          #controlbar .cb_panel > .scb_button:hover { background-color: #3C4048;}")
 
     class(output_theme) <- c("css", "html", "character")
   }
@@ -69,16 +74,3 @@ get_custom_theme <- function(type = "bs4Dash-light-dark", font_family = "Source 
 
   output_theme
 }
-
-#' Use theme for shinydashboard/shinydashboardPlus projects. Wrapper for R fresh package
-#'
-#' @param theme A theme code
-#'
-#' @export
-#'
-#' @examples
-#' RocheIdentity::use_theme(RocheIdentity::get_roche_theme(type = "blue", font_family = "RocheSans"))
-
-use_theme <- function(theme) {
-  fresh::use_theme(theme)
-  }
