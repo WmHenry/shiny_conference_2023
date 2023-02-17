@@ -9,12 +9,7 @@ app_ui <- function(request) {
     bs4Dash::dashboardPage(
       title = "Shiny Conference 2023",
       skin = "light",
-      freshTheme = get_custom_theme(
-        type = "bs4Dash-light-dark",
-        fresh::bs4dash_layout(
-          control_sidebar_width = "700px"
-        )
-      ),
+      freshTheme = get_custom_theme(),
       dark = NULL,
       bs4Dash::dashboardHeader(
         fixed = TRUE,
@@ -39,7 +34,7 @@ app_ui <- function(request) {
           collapsed = TRUE,
           overlay = FALSE,
           skin = "light",
-          width = 300,
+          width = 350,
           shinyCohortBuilder::cb_ui(id = "data", steps = FALSE)
         )
       ),
