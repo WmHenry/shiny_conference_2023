@@ -11,14 +11,13 @@
 #' @examples
 #' RocheIdentity::get_roche_theme()
 #' RocheIdentity::get_roche_theme(type = "bs4Dash-light-dark", font_family = "Source Sans Pro")
-get_custom_theme <- function(font_family = "Source Sans Pro") {
-
-  output_theme <- ""
+get_custom_theme <- function() {
 
   output_theme <- fresh::create_theme(
     fresh::bs4dash_layout(
       main_bg = "#EAEAEA",
-      control_sidebar_width = "350px"),
+      control_sidebar_width = "350px"
+    ),
     fresh::bs4dash_vars(
       body_color = "#3C4048",
       body_overflow_y = "hidden",
@@ -29,8 +28,10 @@ get_custom_theme <- function(font_family = "Source Sans Pro") {
       navbar_dark_active_color = "#bec5cb",
       navbar_dark_hover_color = "#bec5cb"
     ),
-    fresh::bs4dash_status(primary = "#00848a",
-                          info="#64aeff"),
+    fresh::bs4dash_status(
+      primary = "#00848a",
+      info = "#64aeff"
+    ),
     fresh::bs4dash_sidebar_light(
       bg = "#ffffff",
       color = "#000000",
@@ -44,33 +45,11 @@ get_custom_theme <- function(font_family = "Source Sans Pro") {
     fresh::bs4dash_yiq(contrasted_threshold = 10, text_dark = "#FFF", text_light = "#272c30")
   )
 
-  output_theme <- paste(output_theme, ".skin-blue .main-header .navbar {background-color: #047378;}
-                        .navbar-white {background-color: #047378;}
-                        .navbar-gray-dark {background-color: #047378;}
-                        .jumbotron {background: #ffffff8f;box-shadow: 0 0px 9px rgb(0 0 0 / 11%), 0 8px 12px rgb(0 0 0 / 8%) !important; border: 1px solid rgb(0 0 0 / 14%);}
-                        .dark-mode .jumbotron {background-color: #373e44;box-shadow: 0 0px 9px rgb(0 0 0 / 18%), 0 8px 12px rgb(0 0 0 / 16%) !important;}
-                        .navbar-nav .dark-theme-icon {color: #fff;}
-                        .btn-light{color: #000000;} .btn-light:hover{color: #000000;}
-                        .dropdown-item.active, .dropdown-item:active {background-color: #64aeff;}
-                        .card.card-outline-tabs .card-header a:hover {border-top: 3px solid #047378;}
-                        .dark-mode .card.card-outline-tabs .card-header a:hover {border-color: #00848a;background: #312d2d;color: #ffffff;}
-                        ol, ul, dl {padding-inline-start: 40px;}
-                        a {color: #1371d8;}
-                        .brand-link {background-color: #00848a !important; padding-left: 15px;}
-                        .cb_panel { position: sticky; top: 0; z-index: 999; padding-bottom: 3px; padding-top: 1px;  padding-right: 5px;  padding-left: 5px;  background-color: #047378;}
-                        #controlbar {  background-color: #047378;  display: block !important;}
-                        #controlbar .cb_steps {  padding: 0 5px 0 5px;  color: #3C4048;}
-                        #controlbar .cb_panel > .scb_button { background-color: #035357; color: #fff; border: 0; margin-top: 3px;}
-                        #controlbar .cb_panel > .scb_button:hover { background-color: #3C4048;}
-                        .wrapper {  overflow-y: auto;  height: 100vh;}
-                        .wrapper::-webkit-scrollbar{display: none;}")
+  theme_file <- includeCSS("inst/www/output_theme.css")
+  output_theme <- paste(output_theme, theme_file)
 
   class(output_theme) <- c("css", "html", "character")
+  output_theme <- gsub("Source Sans Pro", "Source Sans Pro", output_theme)
 
-
-  if(font_family %in% c("Source Sans Pro")){
-    output_theme <- gsub("Source Sans Pro", font_family, output_theme)
-    output_theme <- gsub("Helvetica Neue", font_family, output_theme)
-  }
   output_theme
 }
