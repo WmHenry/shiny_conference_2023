@@ -61,7 +61,9 @@ get_custom_theme <- function(font_family = "Source Sans Pro") {
                         #controlbar {  background-color: #047378;  display: block !important;}
                         #controlbar .cb_steps {  padding: 0 5px 0 5px;  color: #3C4048;}
                         #controlbar .cb_panel > .scb_button { background-color: #035357; color: #fff; border: 0; margin-top: 3px;}
-                        #controlbar .cb_panel > .scb_button:hover { background-color: #3C4048;}")
+                        #controlbar .cb_panel > .scb_button:hover { background-color: #3C4048;}
+                        .wrapper {  overflow-y: auto;  height: 100vh;}
+                        .wrapper::-webkit-scrollbar{display: none;}")
 
   class(output_theme) <- c("css", "html", "character")
 

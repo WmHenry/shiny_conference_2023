@@ -1,18 +1,4 @@
 /*
-body {
-  overflow-y: hidden;
-}
-*/
-.wrapper {
-  overflow-y: auto;
-  height: 100vh;
-}
-
-.wrapper::-webkit-scrollbar{
-  display: none;
-}
-
-/*
 .rule-container > .rule-header {
   height: 0;
 }
