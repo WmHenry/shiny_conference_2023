@@ -11,3 +11,9 @@ undecorate_logo <- function(logo_brand) {
   logo_brand$children[[1]]$attribs$class <- "brand-image"
   return(logo_brand)
 }
+
+pin_controlbar <- function(controlbar, ...) {
+  controlbar[[2]] <- controlbar[[2]] %>%
+    shiny::tagAppendAttributes(`data-pin` = "pin")
+  return(controlbar)
+}

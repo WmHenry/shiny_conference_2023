@@ -13,5 +13,5 @@ app_server <- function(input, output, session) {
     coh$get_data(step_id = coh$last_step_id(), state = "post", collect = TRUE)
   })
 
-  timelines_server("glossary")
+  timelines_server(session, data_filtered)
 }

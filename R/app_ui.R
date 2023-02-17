@@ -16,21 +16,26 @@ app_ui <- function(request) {
         )
       ),
       dark = NULL,
-      bs4Dash::dashboardHeader(
+      header = bs4Dash::dashboardHeader(
         fixed = TRUE,
         titleWidth = 300,
         title = bs4Dash::dashboardBrand(
           title = "Demo App"
         )
       ),
-      bs4Dash::dashboardSidebar(
+      sidebar = bs4Dash::dashboardSidebar(
         width = 500,
+        skin = "dark",
         bs4Dash::sidebarMenu(
           id = "sidebar",
           about_item,
-          timelines_item %>%
-            show_when_filters_ready("data-") %>%
-            htmltools::tagAppendAttributes(class = "sg_hidden")
+          timelines_item
+        )
+      ),
+      body = bs4Dash::dashboardBody(
+        bs4Dash::tabItems(
+          about_content,
+          timelines_content
         )
       ),
       controlbar = pin_controlbar(
@@ -41,12 +46,6 @@ app_ui <- function(request) {
           skin = "light",
           width = 300,
           shinyCohortBuilder::cb_ui(id = "data", steps = FALSE)
-        )
-      ),
-      bs4Dash::dashboardBody(
-        bs4Dash::tabItems(
-          about_ui("about"),
-          timelines_ui("glossary")
         )
       )
     )
