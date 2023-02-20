@@ -5,9 +5,3 @@ show_when_filters_ready <- function(item, ns) {
     jsCall = shinyGizmo::jsCalls$show()
   )
 }
-
-#' @noRd
-undecorate_logo <- function(logo_brand) {
-  logo_brand$children[[1]]$attribs$class <- "brand-image"
-  return(logo_brand)
-}
