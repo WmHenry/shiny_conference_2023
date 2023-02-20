@@ -4,6 +4,10 @@
 #' @importFrom magrittr %>%
 NULL
 
+.onLoad <- function(...) {
+  shiny::addResourcePath('themes', system.file("www", package = "scdemo2023"))
+}
+
 #' Run application
 #'
 #' @name run_app

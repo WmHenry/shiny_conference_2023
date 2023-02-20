@@ -10,6 +10,7 @@ app_ui <- function(request) {
       title = "Shiny Conference 2023",
       skin = "light",
       dark = NULL,
+      freshTheme = "themes/company.css",
       bs4Dash::dashboardHeader(
         fixed = TRUE,
         skin = "light",
@@ -56,8 +57,7 @@ app_ui <- function(request) {
         version = utils::packageVersion("scdemo2023"),
         package = "scdemo2023",
         src = "www",
-        script = "script.js",
-        stylesheet = "company.css"
+        script = "script.js"
       )
     )
 }

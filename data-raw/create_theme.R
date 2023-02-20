@@ -19,8 +19,8 @@ fresh::create_theme(
   fresh::bs4dash_sidebar_light(
     bg = "#035357", # sidebar background
     hover_bg = "#006368",  # sidebar item background on hover
-    color = "#343a40",  # sidebar item text color
-    hover_color = "#6c757d"  # sidebar item text color on hover
+    color = "#b1b1b1",  # sidebar item text color
+    hover_color = "#d1d1d1"  # sidebar item text color on hover
   ),
   output_file = "inst/www/company.css"
 )
