@@ -9,17 +9,22 @@ app_ui <- function(request) {
     bs4Dash::dashboardPage(
       title = "Shiny Conference 2023",
       skin = "light",
-      freshTheme = get_custom_theme(),
       dark = NULL,
+      freshTheme = "themes/company.css",
       bs4Dash::dashboardHeader(
         fixed = TRUE,
+        skin = "light",
+        status = "",
         titleWidth = 300,
         title = bs4Dash::dashboardBrand(
-          title = "Demo App"
+          title = "Demo App",
+          color = "primary"
         )
       ),
       bs4Dash::dashboardSidebar(
         width = 500,
+        skin = "light",
+        status = "primary",
         bs4Dash::sidebarMenu(
           id = "sidebar",
           about_item,
@@ -34,8 +39,8 @@ app_ui <- function(request) {
           collapsed = TRUE,
           overlay = FALSE,
           skin = "light",
-          width = 350,
-          shinyCohortBuilder::cb_ui(id = "data", steps = FALSE)
+          width = 300,
+          shinyCohortBuilder::cb_ui(id = "data", steps = TRUE)
         )
       ),
       bs4Dash::dashboardBody(
@@ -52,8 +57,7 @@ app_ui <- function(request) {
         version = utils::packageVersion("scdemo2023"),
         package = "scdemo2023",
         src = "www",
-        script = "script.js"#,
-        # stylesheet = "styles.css"
+        script = "script.js"
       )
     )
 }
