@@ -36,11 +36,11 @@ patients <- list(
   demographics = DataFakeR::schema_get_table(sch, "demographics") %>%
     dplyr::select(-dplyr::starts_with("tmp")) %>%
     dplyr::mutate(random_date = lastseen - sample(365 * 1:5, 1)),
-  visit = DataFakeR::schema_get_table(sch, "visit") %>%
+  visits = DataFakeR::schema_get_table(sch, "visits") %>%
     dplyr::select(-dplyr::starts_with("tmp")),
-  indications = DataFakeR::schema_get_table(sch, "indications") %>%
+  diagnoses = DataFakeR::schema_get_table(sch, "diagnoses") %>%
     dplyr::select(-dplyr::starts_with("tmp")) %>% dplyr::distinct(),
-  line_of_therapy = DataFakeR::schema_get_table(sch, "line_of_therapy") %>%
+  therapies = DataFakeR::schema_get_table(sch, "therapies") %>%
     dplyr::select(-dplyr::starts_with("tmp"))
 )
 

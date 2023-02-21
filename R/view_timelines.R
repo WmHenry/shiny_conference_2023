@@ -25,9 +25,9 @@ timelines_server <- function(session, filtered_data) {
 
   observeEvent(filtered_data(), {
     mod_data$demographics <- filtered_data()$demographics
-    mod_data$lineoftherapy <- filtered_data()$line_of_therapy
-    mod_data$visits <- filtered_data()$visit
-    mod_data$indications <- filtered_data()$indications
+    mod_data$lineoftherapy <- filtered_data()$therapies
+    mod_data$visits <- filtered_data()$visits
+    mod_data$indications <- filtered_data()$diagnoses
   })
 
   callModule(
@@ -74,17 +74,17 @@ data_mapping <- list(
       "linenumber" = "linenumber",
       "startdate" = "startdate",
       "enddate" = "enddate",
-      "indication" = "indication"
+      "indication" = "diagnosis"
     ),
     "visits" = list(
       "patientid" = "patientid",
       "visitdate" = "visitdate",
       "visittype" = "visittype",
-      "indication" = "indication"
+      "indication" = "diagnosis"
     ),
     "indications" = list(
       "patientid" = "patientid",
-      "indication" = "indication",
+      "indication" = "diagnosis",
       "indexdate" = "diagnosisdate"
     )
   )

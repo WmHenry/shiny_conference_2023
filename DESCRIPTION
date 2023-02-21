@@ -31,9 +31,8 @@ RoxygenNote: 7.2.3
 Collate:
     'scdemo2023-package.R'
     'data.R'
-    'utils_get_custom_theme.R'
     'utils-ui.R'
-    'define_filters.R'
+    'filters.R'
     'view_about.R'
     'view_timelines.R'
     'app_ui.R'

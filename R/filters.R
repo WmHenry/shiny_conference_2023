@@ -21,15 +21,15 @@ define_filters <- function(data_source) {
     ),
     cohortBuilder::filter(
       "discrete",
-      dataset = "visit",
-      id = "indication",
-      name = "Indication",
-      variable = "indication",
+      dataset = "visits",
+      id = "diagnosis",
+      name = "Diagnosis",
+      variable = "diagnosis",
       gui_input = "vs"
     ),
     cohortBuilder::filter(
       "discrete",
-      dataset = "visit",
+      dataset = "visits",
       id = "visittype",
       name = "Type of visit",
       variable = "visittype",
@@ -37,7 +37,7 @@ define_filters <- function(data_source) {
     ),
     cohortBuilder::filter(
       "range",
-      dataset = "line_of_therapy",
+      dataset = "therapies",
       id = "linenumber",
       name = "Treatment line",
       variable = "linenumber"
