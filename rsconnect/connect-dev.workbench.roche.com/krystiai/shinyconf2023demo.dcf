@@ -5,10 +5,10 @@ account: krystiai
 server: connect-dev.workbench.roche.com
 hostUrl: https://connect-dev.workbench.roche.com/__api__
 appId: 261
-bundleId: 456
+bundleId: 458
 url: https://connect-dev.workbench.roche.com/shinyConf2023Demo/
-when: 1677001621.00966
-lastSyncTime: 1677001621.00967
+when: 1677063682.73363
+lastSyncTime: 1677063682.73364
 asMultiple: FALSE
 asStatic: FALSE
 ignoredFiles: .Rbuildignore|.Rprofile|data-raw/create_theme.R|data-raw/patients.R|data-raw/schema.yml|inst/www/.sass_cache_keys|inst/www/custom_styles.css|long.R|man/define_filters.Rd|man/hello.Rd|man/patients.Rd|man/run_app.Rd|man/scdemo2023-package.Rd

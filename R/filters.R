@@ -6,6 +6,13 @@ define_filters <- function(data_source) {
   cohortBuilder::cohort(
     data_source,
     cohortBuilder::filter(
+      "discrete",
+      dataset = "demographics",
+      id = "gender",
+      name = "Gender",
+      variable = "gender"
+    ),
+    cohortBuilder::filter(
       "date_range",
       dataset = "demographics",
       id = "dateofdeath",
