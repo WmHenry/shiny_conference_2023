@@ -28,7 +28,7 @@ define_filters <- function(data_source) {
     ),
     cohortBuilder::filter(
       "discrete",
-      dataset = "visits",
+      dataset = "diagnoses",
       id = "diagnosis",
       name = "Diagnosis",
       variable = "diagnosis",
@@ -54,15 +54,15 @@ define_filters <- function(data_source) {
 
 data_relations <- bind_keys(
   bind_key(
-    update = data_key("visits", "patientid"),
-    data_key("demographics", "patientid")
-  ),
-  bind_key(
     update = data_key("diagnoses", "patientid"),
     data_key("demographics", "patientid")
   ),
   bind_key(
+    update = data_key("visits", "patientid"),
+    data_key("diagnoses", "patientid")
+  ),
+  bind_key(
     update = data_key("therapies", "patientid"),
-    data_key("demographics", "patientid")
+    data_key("visits", "patientid")
   )
 )
