@@ -6,20 +6,7 @@
 app_server <- function(input, output, session) {
   data_source <- cohortBuilder::set_source(
     cohortBuilder::as.tblist(patients),
-    binding_keys = bind_keys(
-      bind_key(
-        update = data_key("visits", "patientid"),
-        data_key("demographics", "patientid")
-      ),
-      bind_key(
-        update = data_key("diagnoses", "patientid"),
-        data_key("demographics", "patientid")
-      ),
-      bind_key(
-        update = data_key("therapies", "patientid"),
-        data_key("demographics", "patientid")
-      )
-    )
+    binding_keys = data_relations
   )
   coh <- define_filters(data_source)
   shinyCohortBuilder::cb_server("data", coh, run_button = TRUE, feedback = TRUE)
