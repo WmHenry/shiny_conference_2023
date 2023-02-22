@@ -789,6 +789,14 @@
         "askpass"
       ]
     },
+    "packrat": {
+      "Package": "packrat",
+      "Version": "0.9.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "2735eb4b51c302014f53acbb3c80a65f",
+      "Requirements": []
+    },
     "pillar": {
       "Package": "pillar",
       "Version": "1.8.1",
@@ -932,6 +940,22 @@
       "Hash": "1de7ab598047a87bba48434ba35d497d",
       "Requirements": []
     },
+    "rsconnect": {
+      "Package": "rsconnect",
+      "Version": "0.8.29",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "fe178fc15af80952f546aafedf655b36",
+      "Requirements": [
+        "curl",
+        "digest",
+        "jsonlite",
+        "openssl",
+        "packrat",
+        "rstudioapi",
+        "yaml"
+      ]
+    },
     "rstudioapi": {
       "Package": "rstudioapi",
       "Version": "0.14",
@@ -1057,8 +1081,8 @@
       "RemoteRepo": "shinyTimelines",
       "RemoteUsername": "r-world-devs",
       "RemoteRef": "HEAD",
-      "RemoteSha": "e80e3a4c07fb909a9a60d2f4b6b0a6e4d7c6c1b9",
-      "Hash": "d84299100d2b46980680b1ebe4eec7db",
+      "RemoteSha": "e702e1f2448db7b25bac97c7890400c5251cece5",
+      "Hash": "525f0ee1f336cc2bd17e1debdcc085a2",
       "Requirements": [
         "dplyr",
         "lubridate",

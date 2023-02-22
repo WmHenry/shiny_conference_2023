@@ -77,7 +77,7 @@ public:
           not_null: false
           unique: false
           na_ratio: 0.16
-          formula: !expr sample(c('DA', 'DB', 'DC', 'DD', 'DE', 'DF'), 1)
+          formula: !expr sample(paste('Diagnosis', LETTERS[1:6]), 1)
           group_by: patientid
         tmp_lastseen:
           type: Date

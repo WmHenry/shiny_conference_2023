@@ -26,7 +26,7 @@ about_content <- bs4Dash::tabItem(
           tags$span(" - analytical module for presenting patients treatment timeline"),
         ),
         tags$li(
-          tags$a(href = "https://github.com/dreamRs/bs4Dash", "bs4Dash"),
+          tags$a(href = "https://github.com/RinteRface/bs4Dash", "bs4Dash"),
           tags$span(" and "),
           tags$a(href = "https://github.com/dreamRs/fresh", "fresh"),
           tags$span(" - application layout and styling")
