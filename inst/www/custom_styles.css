@@ -1,3 +1,6 @@
+body {
+  overflow: hidden;
+}
 .brand-link {
   padding-left: 15px;
 }

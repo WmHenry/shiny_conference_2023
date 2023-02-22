@@ -11,7 +11,7 @@ app_ui <- function(request) {
       skin = "light",
       dark = NULL,
       freshTheme = "themes/company.css",
-      bs4Dash::dashboardHeader(
+      header = bs4Dash::dashboardHeader(
         fixed = TRUE,
         skin = "light",
         status = "",
@@ -21,16 +21,20 @@ app_ui <- function(request) {
           color = "primary"
         )
       ),
-      bs4Dash::dashboardSidebar(
+      sidebar = bs4Dash::dashboardSidebar(
         width = 500,
         skin = "light",
         status = "primary",
         bs4Dash::sidebarMenu(
           id = "sidebar",
           about_item,
-          timelines_item %>%
-            show_when_filters_ready("data-") %>%
-            htmltools::tagAppendAttributes(class = "sg_hidden")
+          timelines_item
+        )
+      ),
+      body = bs4Dash::dashboardBody(
+        bs4Dash::tabItems(
+          about_content,
+          timelines_content
         )
       ),
       controlbar = pin_controlbar(
@@ -41,12 +45,6 @@ app_ui <- function(request) {
           skin = "light",
           width = 300,
           shinyCohortBuilder::cb_ui(id = "data", steps = TRUE)
-        )
-      ),
-      bs4Dash::dashboardBody(
-        bs4Dash::tabItems(
-          about_ui("about"),
-          timelines_ui("glossary")
         )
       )
     )
@@ -60,21 +58,4 @@ app_ui <- function(request) {
         script = "script.js"
       )
     )
-}
-
-autodisable_js_call <- shinyGizmo::jsCalls$custom(
-  false = htmlwidgets::JS(
-    "$(this).removeClass('control-sidebar-slide-open'); $('#controlbar-toggle').addClass('disabled-link');"
-  ),
-  true = htmlwidgets::JS("openControlbar()")
-)
-autodisable_controlbar <- function(page_body) {
-  if (page_body[[2]][[1]]$name == "body") {
-    page_body[[2]][[1]] <- shinyGizmo::conditionalJS(
-      page_body[[2]][[1]],
-      condition = "input.sidebar != 'about'",
-      jsCall = autodisable_js_call
-    )
-  }
-  return(page_body)
 }
