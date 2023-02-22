@@ -2,4 +2,7 @@
 
 export(run_app)
 import(shiny)
+importFrom(cohortBuilder,bind_key)
+importFrom(cohortBuilder,bind_keys)
+importFrom(cohortBuilder,data_key)
 importFrom(magrittr,"%>%")

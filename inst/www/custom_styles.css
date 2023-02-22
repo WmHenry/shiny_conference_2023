@@ -29,6 +29,9 @@ body {
 .cb_panel > .scb_button:hover {
   background-color: #006368;
 }
+.cb_filters > div:not([class]) {
+  padding: 0 !important;
+}
 .wrapper {
   overflow-y: auto;  height: 100vh;
 }

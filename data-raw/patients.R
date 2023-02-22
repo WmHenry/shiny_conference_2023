@@ -1,3 +1,5 @@
+unlink("data/patients.rda")
+
 library(magrittr)
 
 simul_line_base <- function(n, line_base, ...) {
@@ -36,10 +38,10 @@ patients <- list(
   demographics = DataFakeR::schema_get_table(sch, "demographics") %>%
     dplyr::select(-dplyr::starts_with("tmp")) %>%
     dplyr::mutate(random_date = lastseen - sample(365 * 1:5, 1)),
-  visits = DataFakeR::schema_get_table(sch, "visits") %>%
-    dplyr::select(-dplyr::starts_with("tmp")),
   diagnoses = DataFakeR::schema_get_table(sch, "diagnoses") %>%
     dplyr::select(-dplyr::starts_with("tmp")) %>% dplyr::distinct(),
+  visits = DataFakeR::schema_get_table(sch, "visits") %>%
+    dplyr::select(-dplyr::starts_with("tmp")),
   therapies = DataFakeR::schema_get_table(sch, "therapies") %>%
     dplyr::select(-dplyr::starts_with("tmp"))
 )
