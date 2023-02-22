@@ -1,3 +1,5 @@
+unlink("data/patients.rda")
+
 library(magrittr)
 
 simul_line_base <- function(n, line_base, ...) {

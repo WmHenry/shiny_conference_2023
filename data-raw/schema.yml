@@ -33,9 +33,9 @@ public:
         gender:
           type: character
           default: .na
-          not_null: true
+          not_null: false
           unique: false
-          na_ratio: 0.05
+          na_ratio: 0.02
           values: ['Male', 'Female']
         tmp_patientid_lastseen:
           type: character
