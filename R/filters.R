@@ -17,14 +17,16 @@ define_filters <- function(data_source) {
       dataset = "demographics",
       id = "dateofdeath",
       name = "Date of death",
-      variable = "dateofdeath"
+      variable = "dateofdeath",
+      n_bins = 20
     ),
     cohortBuilder::filter(
       "date_range",
       dataset = "demographics",
       id = "lastseen",
       name = "Date of last visit",
-      variable = "lastseen"
+      variable = "lastseen",
+      n_bins = 20
     ),
     cohortBuilder::filter(
       "discrete",
