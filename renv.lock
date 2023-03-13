@@ -193,15 +193,10 @@
     },
     "cohortBuilder": {
       "Package": "cohortBuilder",
-      "Version": "0.1.2",
-      "Source": "GitHub",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteRepo": "cohortBuilder",
-      "RemoteUsername": "r-world-devs",
-      "RemoteRef": "HEAD",
-      "RemoteSha": "a99cefd41ccfd7950e94c03da6b2b45a3f9d84d1",
-      "Hash": "ffaf988cead13654e3c08ea9adff9655",
+      "Version": "0.2.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "2470eb0331157f65f6f205c43b42a2af",
       "Requirements": [
         "R6",
         "dplyr",
@@ -212,8 +207,8 @@
         "magrittr",
         "purrr",
         "rlang",
-        "tidyr",
-        "yaml"
+        "tibble",
+        "tidyr"
       ]
     },
     "colorspace": {
@@ -1026,15 +1021,15 @@
     },
     "shinyCohortBuilder": {
       "Package": "shinyCohortBuilder",
-      "Version": "0.1.2",
+      "Version": "0.1.0.9002",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteRepo": "shinyCohortBuilder",
       "RemoteUsername": "r-world-devs",
-      "RemoteRef": "krystian.custom_attribs",
-      "RemoteSha": "521cff6dc1c1a81d45e8246bfcee416ddcd90cf6",
-      "Hash": "ae73ac8c20fb7fa58a0dde99f7422ebe",
+      "RemoteRef": "krystian.deps_update",
+      "RemoteSha": "eb68ef31c94db13fc3579e54125cb6e7de326e1f",
+      "Hash": "e59200556baac0e4c5398255a3d8eac3",
       "Requirements": [
         "bslib",
         "cohortBuilder",
@@ -1045,6 +1040,7 @@
         "highr",
         "htmltools",
         "jsonlite",
+        "lifecycle",
         "magrittr",
         "purrr",
         "rlang",
@@ -1057,10 +1053,10 @@
     },
     "shinyGizmo": {
       "Package": "shinyGizmo",
-      "Version": "0.4",
+      "Version": "0.4.2",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "6d2d1a031e1259ddbf338d4aba01a3b3",
+      "Hash": "0be068d8598aca4ee61cc19f03ef51bf",
       "Requirements": [
         "glue",
         "htmltools",
