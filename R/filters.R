@@ -54,17 +54,17 @@ define_filters <- function(data_source) {
   )
 }
 
-data_relations <- bind_keys(
-  bind_key(
-    update = data_key("diagnoses", "patientid"),
-    data_key("demographics", "patientid")
+data_relations <- cohortBuilder::bind_keys(
+  cohortBuilder::bind_key(
+    update = cohortBuilder::data_key("diagnoses", "patientid"),
+    cohortBuilder::data_key("demographics", "patientid")
   ),
-  bind_key(
-    update = data_key("visits", "patientid"),
-    data_key("diagnoses", "patientid")
+  cohortBuilder::bind_key(
+    update = cohortBuilder::data_key("visits", "patientid"),
+    cohortBuilder::data_key("diagnoses", "patientid")
   ),
-  bind_key(
-    update = data_key("therapies", "patientid"),
-    data_key("visits", "patientid")
+  cohortBuilder::bind_key(
+    update = cohortBuilder::data_key("therapies", "patientid"),
+    cohortBuilder::data_key("visits", "patientid")
   )
 )
